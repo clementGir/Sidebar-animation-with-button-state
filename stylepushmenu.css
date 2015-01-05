@@ -1,0 +1,140 @@
+.cbp-spmenu {
+	background: #252931;
+	position: fixed;
+	z-index: 3500;
+}
+
+.cbp-spmenu h4 {
+	padding: 1.4rem;
+	margin: 0;
+	font-size: 1.2rem;
+	font-family: 'latoregular';
+	font-family: 'latobold';
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 2px;
+	font-weight: 100;
+	text-align: left;
+	padding-left: 8%;
+}
+
+.cbp-spmenu a {
+	display: block;
+	font-size: 1rem;
+	font-family: 'latoregular';
+	text-transform: uppercase;
+	color: black;
+	letter-spacing: 2px;
+	font-weight: 100;
+	text-decoration: none;
+	text-align: left;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all .3s cubic-bezier(.165, .84, .44, 1);
+}
+
+.cbp-spmenu a.overlay-hidden {
+	-webkit-transform: translate3d(-120%,0,0);
+	-moz-transform: translate3d(-120%,0,0);
+	-ms-transform: translate3d(-120%,0,0);
+	-o-transform: translate3d(-120%,0,0);
+	transform: translate3d(-120%,0,0);
+}
+.cbp-spmenu li:nth-child(1) a{
+	-webkit-transition-delay: .05s;
+}
+.cbp-spmenu li:nth-child(2) a{
+	-webkit-transition-delay: .1s;
+}
+.cbp-spmenu li:nth-child(3) a{
+	-webkit-transition-delay: .15s;
+}
+.cbp-spmenu li:nth-child(4) a{
+	-webkit-transition-delay: .2s;
+}
+.cbp-spmenu li:nth-child(5) a{
+	-webkit-transition-delay: .25s;
+}
+.cbp-spmenu li:nth-child(6) a{
+	-webkit-transition-delay: .3s;
+}
+.cbp-spmenu li:nth-child(7) a{
+	-webkit-transition-delay: .35s;
+}
+.cbp-spmenu li:nth-child(8) a{
+	-webkit-transition-delay: .4s;
+}
+.cbp-spmenu li:nth-child(9) a{
+	-webkit-transition-delay: .45s;
+}
+
+.cbp-spmenu a:last-child {
+	/*box-shadow: 0px 2px #1a1a1a inset, 0px 2px #1a1a1a;*/
+}
+
+.cbp-spmenu li:nth-child(even){
+	background: white;
+}
+
+.cbp-spmenu li:hover {
+	background: lightgray;
+}
+
+.cbp-spmenu li:active {
+	background: grey;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 80%;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+	padding-top: 1.3em;
+	padding-bottom: 1.3em;
+}
+	.cbp-spmenu-vertical a:last-child{}
+
+
+/* Vertical menu that slides from the left or right */
+
+
+
+.cbp-spmenu-left {
+	left: -80%;
+	background-color: white;
+}
+
+
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.cbp-spmenu-push-toright {
+	left: 80%;
+}
+
+.cbp-spmenu-push-toleft {
+	left: -80%;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}

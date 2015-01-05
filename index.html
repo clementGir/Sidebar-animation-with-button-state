@@ -1,0 +1,126 @@
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="stylepushmenu.css"/>
+
+    <meta charset="UTF-8" />
+  </head>
+  <body lang="fr" class="cbp-spmenu-push">
+      <div class="overlay overlay-hidden"></div>
+
+      <header>
+        <div id="navfix">
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s2">
+            <div style="height:4rem; background: lightgray;"></div>
+            <ul id="parametrenav">
+              <li><a class="overlay-hidden" href="#">Parametre 1.</a></li>
+              <li><a class="overlay-hidden" href="#">Parametre 2.</a></li>
+              <li><a class="overlay-hidden" href="#">Parametre 3.</a></li>
+              <li><a class="overlay-hidden" href="#">Parametre 4.</a></li>
+              <li><a class="overlay-hidden" href="#">Parametre 5.</a></li>
+            </ul>       
+          </nav>
+
+          <button class="picto" id="showLeftPush">
+            <div class="design">
+              <div class="logo"></div>
+              <div class="logo"></div>
+            </div>
+          </button>
+
+        </div>
+      </header>
+
+    <div class="content">
+      <div class="bloc"> <p>bloc 1</p> </div>
+      <div class="bloc"> <p>bloc 2</p></div>
+      <div class="bloc"> <p>bloc 3</p></div>
+      <div class="bloc"> <p>bloc 4</p></div>
+      <div class="bloc"> <p>bloc 5</p></div>
+      <div class="bloc"> <p>bloc 6</p></div>
+      <div class="bloc"> <p>bloc 7</p></div>
+      <div class="bloc"> <p>bloc 8</p></div>
+      <div class="bloc"> <p>bloc 9</p></div>
+      <div class="bloc"> <p>bloc 10</p></div>
+      <div class="bloc"> <p>bloc 11</p></div>
+      <div class="bloc"> <p>bloc 12</p></div>
+      <div class="bloc"> <p>bloc 13</p></div>
+      <div class="bloc"> <p>bloc 14</p></div>
+      <div class="bloc"> <p>bloc 15</p></div>
+    </div>
+
+  </body>
+
+    <script src="classie.js"></script>
+
+      <script>
+
+      var menuLeft = document.getElementById( 'cbp-spmenu-s2' ),
+        showLeftPush = document.getElementById( 'showLeftPush' ),
+        body = document.body;
+
+    
+      showLeftPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toright' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+      };   
+
+    </script>
+
+ <script type="text/javascript">
+
+$(".picto").click(function () {
+    
+    if($('button').hasClass('open')) {       
+        $(this).addClass('close').removeClass('open');
+    }
+    else{
+        $(this).removeClass('close').addClass('open');
+    }
+});
+
+ </script>
+
+          <script type="text/javascript">
+
+        $("#showLeftPush").click(function(){
+            $(".overlay").toggleClass("overlay-hidden");
+            $('.cbp-spmenu a').toggleClass('overlay-hidden');
+          });
+        $(".overlay").click(function(){
+          $('.cbp-spmenu a').toggleClass('overlay-hidden');
+            $(".overlay").toggleClass("overlay-hidden");
+            classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toright' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+         $(".picto").removeClass('open').addClass('close');
+          });
+
+
+      </script>
+
+
+
+    <script type="text/javascript">
+      $(document).scroll(function() {
+        if ($(document).scrollTop() >= 1) {
+          
+          $('#navfix').addClass('navfixonscroll');
+        }
+        if ($(document).scrollTop() <= 1) {
+          
+          $('#navfix').removeClass('navfixonscroll');
+        }
+      });
+      </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript"  src='http://cdn.renderedfont.com/js/renderedfont-0.8.min.js#free'></script>
+
+</html>
+
